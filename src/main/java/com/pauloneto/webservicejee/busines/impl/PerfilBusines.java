@@ -59,6 +59,17 @@ public class PerfilBusines extends BusinessGeneric<Perfil,PerfilDTO>{
 	}
 	
 	@Override
+	public List<Perfil> listar(Class<Perfil> clazz){
+		return repository.findAll(clazz);
+	}
+	
+	@Override
+	public Perfil obterPorId(Long codigo) {
+		return repository.findId(Perfil.class, codigo);
+	}
+}
+	
+	@Override
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void remover(Long codigo) throws BusinesException {
 		Perfil p = repository.findId(Perfil.class, codigo);
