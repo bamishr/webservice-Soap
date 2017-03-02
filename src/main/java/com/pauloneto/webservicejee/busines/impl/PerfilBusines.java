@@ -68,6 +68,16 @@ public class PerfilBusines extends BusinessGeneric<Perfil,PerfilDTO>{
 		return repository.findId(Perfil.class, codigo);
 	}
 }
+	@Override
+	public List<Perfil> listar(Class<Perfil> clazz){
+		return repository.findAll(clazz);
+	}
+	
+	@Override
+	public Perfil obterPorId(Long codigo) {
+		return repository.findId(Perfil.class, codigo);
+	}
+}
 	
 	@Override
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
