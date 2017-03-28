@@ -1,6 +1,13 @@
 package com.pauloneto.webservicejee.busines;
 
 import com.pauloneto.webservicejee.mesages.MesagesProperties;
+import com.pauloneto.webservicejee.mesages.KeyMesages;
+import com.pauloneto.webservicejee.models.Perfil;
+import com.pauloneto.webservicejee.models.Usuario;
+import com.pauloneto.webservicejee.repository.RepositoryException;
+import com.pauloneto.webservicejee.repository.impl.PerfilRepository;
+import com.pauloneto.webservicejee.util.AssertUtils;
+import com.pauloneto.webservicejee.util.HashPasswordUtil;
 
 public class BusinesException extends Exception {
 
