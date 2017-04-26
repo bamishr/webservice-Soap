@@ -53,5 +53,16 @@ public abstract class BusinessGeneric<ENTITY,DTO> {
 
 	public abstract List<ENTITY> listar(Class<ENTITY> clazz);
 
+	public abstract ENTITY obterPorId(Long codigo);@Inject
+	protected IWebServiceConverter<ENTITY, DTO> converter;
+
+	public abstract ENTITY atualizar(Long codigo, DTO dto) throws BusinesException;
+
+	public abstract ENTITY salvar(DTO dto)throws BusinesException;
+
+	public abstract void remover(Long codigo) throws BusinesException;
+
+	public abstract List<ENTITY> listar(Class<ENTITY> clazz);
+
 	public abstract ENTITY obterPorId(Long codigo);
 }
