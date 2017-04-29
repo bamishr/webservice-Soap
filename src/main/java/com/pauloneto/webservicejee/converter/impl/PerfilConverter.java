@@ -77,4 +77,17 @@ public class PerfilConverter implements IWebServiceConverter<Perfil, PerfilDTO> 
 		}
 		return p;
 	}
+	@Inject
+	private Logger logger;
+	
+	@Override
+	public Perfil toEntidade(PerfilDTO dto) {
+		Perfil p = new Perfil();
+		try {
+			BeanUtils.copyProperties(p, dto);
+		} catch (IllegalAccessException | InvocationTargetException e) {
+			logger.error(ExceptionUtils.getRootCauseMessage(e),e);
+		}
+		return p;
+	}
 }
