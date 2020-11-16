@@ -15,6 +15,14 @@
 			<property name="hibernate.jdbc.batch_size" value="50" />
 			<property name="hibernate.default_batch_fetch_size" value="8" />
             <property name="hibernate.transaction.jta.platform"
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+			<!-- validate | update | create | create-drop -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.jdbc.batch_size" value="50" />
+			<property name="hibernate.default_batch_fetch_size" value="8" />
+            <property name="hibernate.transaction.jta.platform"
 				value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
 
 			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" 
