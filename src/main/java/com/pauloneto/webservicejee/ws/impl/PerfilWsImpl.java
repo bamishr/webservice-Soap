@@ -42,6 +42,11 @@ public class PerfilWsImpl extends WebServiceGeneric<PerfilDTO, Perfil> implement
 		perfils.add(p2);
 		perfils.add(p3);
 		return perfils;
+		PerfilDTO p3 = new PerfilDTO(3L,"DBA");
+		perfils.add(p1);
+		perfils.add(p2);
+		perfils.add(p3);
+		return perfils;
 	}
 
 }
