@@ -21,3 +21,8 @@ public interface IPerfilWs {
 	@WebMethod
 	public List<PerfilDTO> obterTodosPerfis();
 }
+public interface IPerfilWs {
+
+	@WebMethod
+	public List<PerfilDTO> obterTodosPerfis();
+}
