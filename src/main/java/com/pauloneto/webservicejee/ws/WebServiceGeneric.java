@@ -5,6 +5,11 @@ import javax.inject.Inject;
 import org.apache.log4j.Logger;
 
 import com.pauloneto.webservicejee.dto.DTO;
+import javax.inject.Inject;
+
+import org.apache.log4j.Logger;
+
+import com.pauloneto.webservicejee.dto.DTO;
 
 public abstract class WebServiceGeneric<T extends DTO<T>,ENTITY> {
 	
